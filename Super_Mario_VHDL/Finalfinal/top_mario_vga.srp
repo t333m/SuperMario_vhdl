@@ -1,0 +1,1229 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.39 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.39 secs
+ 
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_mario_vga.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_mario_vga"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : top_mario_vga
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal\sprites_personajes.vhd" into library work
+Parsing entity <sprites_personajes>.
+Parsing architecture <Behavioral> of entity <sprites_personajes>.
+Parsing VHDL file "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal\mario\mario_ctrl.vhd" into library work
+Parsing entity <mario_ctrl>.
+Parsing architecture <Behavioral> of entity <mario_ctrl>.
+Parsing VHDL file "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal\mario\colision_mux.vhd" into library work
+Parsing entity <colision_mux>.
+Parsing architecture <Behavioral> of entity <colision_mux>.
+Parsing VHDL file "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\rom_nivel1.vhd" into library work
+Parsing entity <rom_nivel1>.
+Parsing architecture <Behavioral> of entity <rom_nivel1>.
+Parsing VHDL file "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\mario vhdl (2)\mario vhdl\motor.vhd" into library work
+Parsing entity <motor>.
+Parsing architecture <Behavioral> of entity <motor>.
+Parsing VHDL file "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal\pintar_Mario.vhd" into library work
+Parsing entity <pintar_Mario>.
+Parsing architecture <Behavioral> of entity <pintar_mario>.
+Parsing VHDL file "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal\mux_rifado.vhd" into library work
+Parsing entity <mux_rifado>.
+Parsing architecture <Behavioral> of entity <mux_rifado>.
+Parsing VHDL file "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal\mario\top_mario.vhd" into library work
+Parsing entity <top_mario>.
+Parsing architecture <Behavioral> of entity <top_mario>.
+Parsing VHDL file "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal\mapa_rom.vhd" into library work
+Parsing entity <mapa_rom>.
+Parsing architecture <Behavioral> of entity <mapa_rom>.
+Parsing VHDL file "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\mario vhdl (2)\mario vhdl\top_mario_vga.vhd" into library work
+Parsing entity <top_mario_vga>.
+Parsing architecture <behavioral> of entity <top_mario_vga>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <top_mario_vga> (architecture <behavioral>) from library <work>.
+
+Elaborating entity <rom_nivel1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mapa_rom> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <motor> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <pintar_Mario> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <sprites_personajes> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:1853 - "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal\pintar_Mario.vhd" Line 65: Variable anim does not hold its value under NOT(clock-edge) condition
+WARNING:HDLCompiler:1853 - "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal\pintar_Mario.vhd" Line 66: Variable anim2 does not hold its value under NOT(clock-edge) condition
+
+Elaborating entity <mux_rifado> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <top_mario> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <colision_mux> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mario_ctrl> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top_mario_vga>.
+    Related source file is "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\mario vhdl (2)\mario vhdl\top_mario_vga.vhd".
+WARNING:Xst:647 - Input <btn_start> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\mario vhdl (2)\mario vhdl\top_mario_vga.vhd" line 171: Output port <p_tick> of the instance <U_MOTOR> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\mario vhdl (2)\mario vhdl\top_mario_vga.vhd" line 407: Output port <mario_vivo> of the instance <u_marioControl> is unconnected or connected to loadless signal.
+    Found 27-bit register for signal <segundo_cont>.
+    Found 4-bit register for signal <tiempo_cent>.
+    Found 4-bit register for signal <tiempo_dec>.
+    Found 4-bit register for signal <tiempo_uni>.
+    Found 4-bit register for signal <punt_mil>.
+    Found 4-bit register for signal <punt_cent>.
+    Found 4-bit register for signal <punt_dec>.
+    Found 8-bit register for signal <coin_collected>.
+    Found 1-bit register for signal <estado_clk60>.
+    Found 20-bit register for signal <contador60>.
+    Found 4-bit register for signal <px_delay<3:0>>.
+    Found 4-bit register for signal <py_delay<3:0>>.
+    Found 13-bit register for signal <tile_idx>.
+    Found 1-bit register for signal <estado_clk>.
+    Found 21-bit register for signal <contador>.
+    Found 13-bit register for signal <scroll_x>.
+    Found 1-bit register for signal <estado_clk60_prev>.
+    Found 11-bit subtractor for signal <GND_4_o_GND_4_o_sub_205_OUT> created at line 359.
+    Found 11-bit subtractor for signal <GND_4_o_GND_4_o_sub_210_OUT> created at line 362.
+    Found 11-bit subtractor for signal <GND_4_o_GND_4_o_sub_223_OUT> created at line 365.
+    Found 11-bit subtractor for signal <GND_4_o_GND_4_o_sub_237_OUT> created at line 368.
+    Found 11-bit subtractor for signal <GND_4_o_GND_4_o_sub_251_OUT> created at line 371.
+    Found 11-bit subtractor for signal <GND_4_o_GND_4_o_sub_265_OUT> created at line 374.
+    Found 11-bit subtractor for signal <GND_4_o_GND_4_o_sub_278_OUT> created at line 377.
+    Found 11-bit subtractor for signal <GND_4_o_GND_4_o_sub_292_OUT> created at line 380.
+    Found 11-bit subtractor for signal <GND_4_o_GND_4_o_sub_306_OUT> created at line 383.
+    Found 11-bit subtractor for signal <GND_4_o_GND_4_o_sub_320_OUT> created at line 386.
+    Found 13-bit adder for signal <pixel_mundo_x> created at line 145.
+    Found 20-bit adder for signal <contador60[19]_GND_4_o_add_5_OUT> created at line 212.
+    Found 13-bit adder for signal <tile_row[4]_GND_4_o_add_8_OUT> created at line 217.
+    Found 4-bit adder for signal <tiempo_uni[3]_GND_4_o_add_18_OUT> created at line 244.
+    Found 4-bit adder for signal <tiempo_dec[3]_GND_4_o_add_20_OUT> created at line 248.
+    Found 4-bit adder for signal <tiempo_cent[3]_GND_4_o_add_21_OUT> created at line 251.
+    Found 27-bit adder for signal <segundo_cont[26]_GND_4_o_add_30_OUT> created at line 256.
+    Found 14-bit adder for signal <n0676> created at line 260.
+    Found 15-bit adder for signal <n0678> created at line 266.
+    Found 11-bit adder for signal <n0679> created at line 268.
+    Found 4-bit adder for signal <punt_dec[3]_GND_4_o_add_91_OUT> created at line 278.
+    Found 4-bit adder for signal <punt_cent[3]_GND_4_o_add_93_OUT> created at line 282.
+    Found 4-bit adder for signal <punt_mil[3]_GND_4_o_add_95_OUT> created at line 286.
+    Found 21-bit adder for signal <contador[20]_GND_4_o_add_115_OUT> created at line 302.
+    Found 13-bit adder for signal <scroll_x[12]_GND_4_o_add_120_OUT> created at line 1241.
+    Found 9-bit adder for signal <GND_4_o_GND_4_o_add_206_OUT> created at line 359.
+    Found 9-bit adder for signal <GND_4_o_GND_4_o_add_211_OUT> created at line 362.
+    Found 13-bit adder for signal <n0828> created at line 137.
+    Found 9-bit adder for signal <GND_4_o_GND_4_o_add_224_OUT> created at line 365.
+    Found 13-bit adder for signal <n0834> created at line 122.
+    Found 9-bit adder for signal <GND_4_o_GND_4_o_add_238_OUT> created at line 368.
+    Found 13-bit adder for signal <n0840> created at line 122.
+    Found 9-bit adder for signal <GND_4_o_GND_4_o_add_252_OUT> created at line 371.
+    Found 13-bit adder for signal <n0846> created at line 122.
+    Found 9-bit adder for signal <GND_4_o_GND_4_o_add_266_OUT> created at line 374.
+    Found 13-bit adder for signal <n0852> created at line 137.
+    Found 9-bit adder for signal <GND_4_o_GND_4_o_add_279_OUT> created at line 377.
+    Found 13-bit adder for signal <n0858> created at line 122.
+    Found 9-bit adder for signal <GND_4_o_GND_4_o_add_293_OUT> created at line 380.
+    Found 13-bit adder for signal <n0864> created at line 122.
+    Found 9-bit adder for signal <GND_4_o_GND_4_o_add_307_OUT> created at line 383.
+    Found 13-bit adder for signal <n0870> created at line 122.
+    Found 9-bit adder for signal <GND_4_o_GND_4_o_add_321_OUT> created at line 386.
+    Found 13-bit adder for signal <n0876> created at line 122.
+    Found 13-bit subtractor for signal <GND_4_o_GND_4_o_sub_123_OUT<12:0>> created at line 1308.
+    Found 4-bit subtractor for signal <GND_4_o_GND_4_o_sub_179_OUT<3:0>> created at line 340.
+    Found 4-bit subtractor for signal <GND_4_o_GND_4_o_sub_147_OUT<3:0>> created at line 340.
+    Found 4-bit subtractor for signal <GND_4_o_GND_4_o_sub_171_OUT<3:0>> created at line 340.
+    Found 4-bit subtractor for signal <GND_4_o_BUS_0065_sub_219_OUT<3:0>> created at line 137.
+    Found 4-bit subtractor for signal <GND_4_o_BUS_0067_sub_233_OUT<3:0>> created at line 122.
+    Found 4-bit subtractor for signal <GND_4_o_BUS_0069_sub_247_OUT<3:0>> created at line 122.
+    Found 4-bit subtractor for signal <GND_4_o_BUS_0071_sub_261_OUT<3:0>> created at line 122.
+    Found 4-bit subtractor for signal <GND_4_o_BUS_0073_sub_274_OUT<3:0>> created at line 137.
+    Found 4-bit subtractor for signal <GND_4_o_BUS_0075_sub_288_OUT<3:0>> created at line 122.
+    Found 4-bit subtractor for signal <GND_4_o_BUS_0077_sub_302_OUT<3:0>> created at line 122.
+    Found 4-bit subtractor for signal <GND_4_o_BUS_0079_sub_316_OUT<3:0>> created at line 122.
+    Found 4-bit subtractor for signal <GND_4_o_BUS_0081_sub_330_OUT<3:0>> created at line 122.
+    Found 5x8-bit multiplier for signal <n0792> created at line 217.
+    Found 9x3-bit multiplier for signal <GND_4_o_GND_4_o_MuLt_327_OUT> created at line 122.
+    Found 16x10-bit Read Only RAM for signal <_n1096>
+    Found 16x10-bit Read Only RAM for signal <_n1113>
+    Found 16x10-bit Read Only RAM for signal <_n1130>
+    Found 16x10-bit Read Only RAM for signal <_n1147>
+    Found 16x10-bit Read Only RAM for signal <_n1164>
+    Found 16x10-bit Read Only RAM for signal <_n1181>
+    Found 1-bit 15-to-1 multiplexer for signal <GND_4_o_X_4_o_Mux_233_o> created at line 122.
+    Found 1-bit 15-to-1 multiplexer for signal <GND_4_o_X_4_o_Mux_247_o> created at line 122.
+    Found 1-bit 15-to-1 multiplexer for signal <GND_4_o_X_4_o_Mux_261_o> created at line 122.
+    Found 1-bit 15-to-1 multiplexer for signal <GND_4_o_X_4_o_Mux_288_o> created at line 122.
+    Found 1-bit 15-to-1 multiplexer for signal <GND_4_o_X_4_o_Mux_302_o> created at line 122.
+    Found 1-bit 15-to-1 multiplexer for signal <GND_4_o_X_4_o_Mux_316_o> created at line 122.
+    Found 4-bit comparator greater for signal <tiempo_cent[3]_PWR_4_o_LessThan_15_o> created at line 242
+    Found 4-bit comparator greater for signal <tiempo_uni[3]_PWR_4_o_LessThan_18_o> created at line 243
+    Found 4-bit comparator greater for signal <tiempo_dec[3]_PWR_4_o_LessThan_20_o> created at line 247
+    Found 14-bit comparator greater for signal <BUS_0008_GND_4_o_LessThan_37_o> created at line 265
+    Found 15-bit comparator greater for signal <GND_4_o_BUS_0009_LessThan_39_o> created at line 266
+    Found 10-bit comparator greater for signal <mario_y_s[9]_GND_4_o_LessThan_40_o> created at line 267
+    Found 11-bit comparator greater for signal <GND_4_o_BUS_0010_LessThan_42_o> created at line 268
+    Found 14-bit comparator greater for signal <BUS_0008_GND_4_o_LessThan_43_o> created at line 265
+    Found 15-bit comparator greater for signal <GND_4_o_BUS_0011_LessThan_45_o> created at line 266
+    Found 10-bit comparator greater for signal <mario_y_s[9]_GND_4_o_LessThan_46_o> created at line 267
+    Found 11-bit comparator greater for signal <GND_4_o_BUS_0012_LessThan_48_o> created at line 268
+    Found 14-bit comparator greater for signal <BUS_0008_GND_4_o_LessThan_49_o> created at line 265
+    Found 15-bit comparator greater for signal <GND_4_o_BUS_0013_LessThan_51_o> created at line 266
+    Found 14-bit comparator greater for signal <BUS_0008_GND_4_o_LessThan_55_o> created at line 265
+    Found 15-bit comparator greater for signal <GND_4_o_BUS_0015_LessThan_57_o> created at line 266
+    Found 10-bit comparator greater for signal <mario_y_s[9]_GND_4_o_LessThan_58_o> created at line 267
+    Found 11-bit comparator greater for signal <GND_4_o_BUS_0016_LessThan_60_o> created at line 268
+    Found 14-bit comparator greater for signal <BUS_0008_GND_4_o_LessThan_61_o> created at line 265
+    Found 15-bit comparator greater for signal <GND_4_o_BUS_0017_LessThan_63_o> created at line 266
+    Found 14-bit comparator greater for signal <BUS_0008_GND_4_o_LessThan_67_o> created at line 265
+    Found 15-bit comparator greater for signal <GND_4_o_BUS_0019_LessThan_69_o> created at line 266
+    Found 14-bit comparator greater for signal <BUS_0008_GND_4_o_LessThan_73_o> created at line 265
+    Found 15-bit comparator greater for signal <GND_4_o_BUS_0021_LessThan_75_o> created at line 266
+    Found 10-bit comparator greater for signal <mario_y_s[9]_GND_4_o_LessThan_76_o> created at line 267
+    Found 11-bit comparator greater for signal <GND_4_o_BUS_0022_LessThan_78_o> created at line 268
+    Found 14-bit comparator greater for signal <BUS_0008_GND_4_o_LessThan_79_o> created at line 265
+    Found 15-bit comparator greater for signal <GND_4_o_BUS_0023_LessThan_81_o> created at line 266
+    Found 4-bit comparator greater for signal <punt_dec[3]_PWR_4_o_LessThan_91_o> created at line 277
+    Found 4-bit comparator greater for signal <punt_cent[3]_PWR_4_o_LessThan_93_o> created at line 281
+    Found 4-bit comparator greater for signal <punt_mil[3]_PWR_4_o_LessThan_95_o> created at line 285
+    Found 13-bit comparator greater for signal <scroll_x[12]_GND_4_o_LessThan_120_o> created at line 306
+    Found 13-bit comparator greater for signal <GND_4_o_scroll_x[12]_LessThan_122_o> created at line 308
+    Found 10-bit comparator greater for signal <px[9]_PWR_4_o_LessThan_131_o> created at line 318
+    Found 10-bit comparator greater for signal <py[9]_GND_4_o_LessThan_133_o> created at line 319
+    Found 13-bit comparator lessequal for signal <n0201> created at line 337
+    Found 13-bit comparator greater for signal <pixel_mundo_x[12]_GND_4_o_LessThan_138_o> created at line 337
+    Found 10-bit comparator greater for signal <n0204> created at line 338
+    Found 10-bit comparator greater for signal <py[9]_GND_4_o_LessThan_140_o> created at line 338
+    Found 13-bit comparator lessequal for signal <n0213> created at line 337
+    Found 13-bit comparator greater for signal <pixel_mundo_x[12]_GND_4_o_LessThan_144_o> created at line 337
+    Found 10-bit comparator greater for signal <n0216> created at line 338
+    Found 10-bit comparator greater for signal <py[9]_GND_4_o_LessThan_146_o> created at line 338
+    Found 13-bit comparator lessequal for signal <n0228> created at line 337
+    Found 13-bit comparator greater for signal <pixel_mundo_x[12]_GND_4_o_LessThan_152_o> created at line 337
+    Found 13-bit comparator lessequal for signal <n0240> created at line 337
+    Found 13-bit comparator greater for signal <pixel_mundo_x[12]_GND_4_o_LessThan_160_o> created at line 337
+    Found 10-bit comparator lessequal for signal <n0243> created at line 338
+    Found 13-bit comparator lessequal for signal <n0256> created at line 337
+    Found 13-bit comparator greater for signal <pixel_mundo_x[12]_GND_4_o_LessThan_168_o> created at line 337
+    Found 13-bit comparator lessequal for signal <n0268> created at line 337
+    Found 13-bit comparator greater for signal <pixel_mundo_x[12]_GND_4_o_LessThan_176_o> created at line 337
+    Found 13-bit comparator lessequal for signal <n0281> created at line 337
+    Found 13-bit comparator greater for signal <pixel_mundo_x[12]_GND_4_o_LessThan_184_o> created at line 337
+    Found 13-bit comparator lessequal for signal <n0297> created at line 337
+    Found 13-bit comparator greater for signal <pixel_mundo_x[12]_GND_4_o_LessThan_192_o> created at line 337
+    Found 10-bit comparator lessequal for signal <n0311> created at line 358
+    Found 10-bit comparator greater for signal <py[9]_GND_4_o_LessThan_204_o> created at line 358
+    Found 10-bit comparator lessequal for signal <n0319> created at line 361
+    Found 10-bit comparator greater for signal <px[9]_GND_4_o_LessThan_209_o> created at line 361
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_215_o> created at line 133
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_216_o> created at line 133
+    Found 10-bit comparator lessequal for signal <n0337> created at line 364
+    Found 10-bit comparator greater for signal <px[9]_GND_4_o_LessThan_222_o> created at line 364
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_229_o> created at line 118
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_230_o> created at line 118
+    Found 10-bit comparator lessequal for signal <n0356> created at line 367
+    Found 10-bit comparator greater for signal <px[9]_GND_4_o_LessThan_236_o> created at line 367
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_243_o> created at line 118
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_244_o> created at line 118
+    Found 10-bit comparator lessequal for signal <n0375> created at line 370
+    Found 10-bit comparator greater for signal <px[9]_GND_4_o_LessThan_250_o> created at line 370
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_257_o> created at line 118
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_258_o> created at line 118
+    Found 10-bit comparator lessequal for signal <n0394> created at line 373
+    Found 10-bit comparator greater for signal <px[9]_GND_4_o_LessThan_264_o> created at line 373
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_270_o> created at line 133
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_271_o> created at line 133
+    Found 10-bit comparator lessequal for signal <n0412> created at line 376
+    Found 10-bit comparator greater for signal <px[9]_GND_4_o_LessThan_277_o> created at line 376
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_284_o> created at line 118
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_285_o> created at line 118
+    Found 10-bit comparator lessequal for signal <n0431> created at line 379
+    Found 10-bit comparator greater for signal <px[9]_GND_4_o_LessThan_291_o> created at line 379
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_298_o> created at line 118
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_299_o> created at line 118
+    Found 10-bit comparator lessequal for signal <n0450> created at line 382
+    Found 10-bit comparator greater for signal <px[9]_GND_4_o_LessThan_305_o> created at line 382
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_312_o> created at line 118
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_313_o> created at line 118
+    Found 10-bit comparator lessequal for signal <n0469> created at line 385
+    Found 10-bit comparator greater for signal <px[9]_GND_4_o_LessThan_319_o> created at line 385
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_324_o> created at line 118
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_325_o> created at line 118
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_326_o> created at line 118
+    Found 9-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_327_o> created at line 118
+    Summary:
+	inferred   6 RAM(s).
+	inferred   2 Multiplier(s).
+	inferred  56 Adder/Subtractor(s).
+	inferred 137 D-type flip-flop(s).
+	inferred  95 Comparator(s).
+	inferred  74 Multiplexer(s).
+Unit <top_mario_vga> synthesized.
+
+Synthesizing Unit <rom_nivel1>.
+    Related source file is "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\rom_nivel1.vhd".
+    Found 7-bit register for signal <out_mario>.
+    Found 7-bit register for signal <outt>.
+    Found 8192x7-bit Read Only RAM for signal <addr[12]_X_5_o_wide_mux_0_OUT>
+    Found 8192x7-bit Read Only RAM for signal <addr_mario[12]_X_5_o_wide_mux_2_OUT>
+    WARNING:Xst:2404 -  FFs/Latches <out_mario<10:7>> (without init value) have a constant value of 0 in block <rom_nivel1>.
+    WARNING:Xst:2404 -  FFs/Latches <outt<10:7>> (without init value) have a constant value of 0 in block <rom_nivel1>.
+    Summary:
+	inferred   2 RAM(s).
+	inferred  14 D-type flip-flop(s).
+Unit <rom_nivel1> synthesized.
+
+Synthesizing Unit <mapa_rom>.
+    Related source file is "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal\mapa_rom.vhd".
+    Found 8-bit register for signal <data_out>.
+    Found 32768x8-bit Read Only RAM for signal <addr[14]_PWR_6_o_wide_mux_0_OUT>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <mapa_rom> synthesized.
+
+Synthesizing Unit <motor>.
+    Related source file is "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\mario vhdl (2)\mario vhdl\motor.vhd".
+    Found 10-bit register for signal <v_count_reg>.
+    Found 10-bit register for signal <h_count_reg>.
+    Found 2-bit register for signal <mod2_reg>.
+    Found 1-bit register for signal <v_sync_reg>.
+    Found 1-bit register for signal <h_sync_reg>.
+    Found 2-bit adder for signal <mod2_next> created at line 1241.
+    Found 10-bit adder for signal <h_count_reg[9]_GND_7_o_add_7_OUT> created at line 1241.
+    Found 10-bit adder for signal <v_count_reg[9]_GND_7_o_add_10_OUT> created at line 1241.
+    Found 10-bit comparator lessequal for signal <n0015> created at line 105
+    Found 10-bit comparator lessequal for signal <n0017> created at line 106
+    Found 10-bit comparator lessequal for signal <n0020> created at line 110
+    Found 10-bit comparator lessequal for signal <n0022> created at line 111
+    Found 10-bit comparator greater for signal <h_count_reg[9]_PWR_7_o_LessThan_18_o> created at line 117
+    Found 10-bit comparator greater for signal <v_count_reg[9]_GND_7_o_LessThan_19_o> created at line 117
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <motor> synthesized.
+
+Synthesizing Unit <pintar_Mario>.
+    Related source file is "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal\pintar_Mario.vhd".
+WARNING:Xst:647 - Input <px<9:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <py<9:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 14-bit register for signal <direccion_rom>.
+    Found 8-bit register for signal <mario_pixelsprite>.
+    Found 7-bit register for signal <direccion_sprite>.
+    Summary:
+	inferred  29 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <pintar_Mario> synthesized.
+
+Synthesizing Unit <sprites_personajes>.
+    Related source file is "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal\sprites_personajes.vhd".
+    Found 8-bit register for signal <rgb_pixel>.
+    Found 16384x8-bit Read Only RAM for signal <addr[13]_PWR_9_o_wide_mux_0_OUT>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <sprites_personajes> synthesized.
+
+Synthesizing Unit <mux_rifado>.
+    Related source file is "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal\mux_rifado.vhd".
+    Found 8-bit register for signal <rgb>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <mux_rifado> synthesized.
+
+Synthesizing Unit <top_mario>.
+    Related source file is "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal\mario\top_mario.vhd".
+    Summary:
+	no macro.
+Unit <top_mario> synthesized.
+
+Synthesizing Unit <colision_mux>.
+    Related source file is "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal\mario\colision_mux.vhd".
+    Found 1-bit register for signal <t_suelo>.
+    Found 1-bit register for signal <t_cab>.
+    Found 1-bit register for signal <t_izq>.
+    Found 1-bit register for signal <t_der>.
+    Found 5-bit register for signal <estado>.
+    Found 13-bit register for signal <rom_addr>.
+    Found 1-bit register for signal <s_suelo>.
+    Found 1-bit register for signal <s_cab>.
+    Found 1-bit register for signal <s_izq>.
+    Found 1-bit register for signal <s_der>.
+    Found 1-bit register for signal <suelo_solido>.
+    Found 1-bit register for signal <cab_solido>.
+    Found 1-bit register for signal <izq_solido>.
+    Found 1-bit register for signal <der_solido>.
+    Found 1-bit register for signal <muro_izq>.
+    Found 1-bit register for signal <muro_der>.
+    Found 1-bit register for signal <resultado_listo>.
+    Found finite state machine <FSM_0> for signal <estado>.
+    -----------------------------------------------------------------------
+    | States             | 26                                             |
+    | Transitions        | 27                                             |
+    | Inputs             | 1                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 10-bit subtractor for signal <GND_20_o_GND_20_o_sub_79_OUT> created at line 118.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_134_OUT> created at line 137.
+    Found 14-bit adder for signal <n0115> created at line 52.
+    Found 10-bit adder for signal <n0196> created at line 101.
+    Found 14-bit adder for signal <n0119> created at line 52.
+    Found 11-bit adder for signal <n0201[10:0]> created at line 110.
+    Found 14-bit adder for signal <n0204> created at line 45.
+    Found 15-bit adder for signal <n0123> created at line 52.
+    Found 11-bit adder for signal <n0209[10:0]> created at line 118.
+    Found 14-bit adder for signal <n0212> created at line 45.
+    Found 6-bit adder for signal <GND_20_o_GND_20_o_add_81_OUT> created at line 47.
+    Found 15-bit adder for signal <n0132> created at line 52.
+    Found 15-bit adder for signal <n0133> created at line 52.
+    Found 15-bit adder for signal <n0224> created at line 45.
+    Found 11-bit adder for signal <BUS_0022_GND_20_o_add_137_OUT> created at line 46.
+    Found 15-bit adder for signal <n0139> created at line 52.
+    Found 10-bit adder for signal <n0232> created at line 146.
+    Found 14-bit adder for signal <n0143> created at line 52.
+    Found 11-bit adder for signal <n0237[10:0]> created at line 154.
+    Found 10-bit adder for signal <n0239> created at line 154.
+    Found 14-bit adder for signal <n0242> created at line 45.
+    Found 14-bit adder for signal <n0150> created at line 52.
+    Found 6x8-bit multiplier for signal <n0192> created at line 52.
+    Found 6x9-bit multiplier for signal <n0205> created at line 52.
+    Found 6x8-bit multiplier for signal <n0233> created at line 52.
+    Found 6x8-bit multiplier for signal <n0243> created at line 52.
+    Found 11-bit comparator greater for signal <rom_data[10]_GND_20_o_LessThan_22_o> created at line 36
+    Found 11-bit comparator greater for signal <GND_20_o_rom_data[10]_LessThan_23_o> created at line 36
+    Found 6-bit comparator greater for signal <GND_20_o_BUS_0006_LessThan_31_o> created at line 50
+    Found 10-bit comparator greater for signal <GND_20_o_BUS_0010_LessThan_55_o> created at line 48
+    Found 10-bit comparator greater for signal <GND_20_o_BUS_0014_LessThan_83_o> created at line 48
+    Found 6-bit comparator greater for signal <GND_20_o_GND_20_o_LessThan_85_o> created at line 50
+    Found 6-bit comparator greater for signal <GND_20_o_GND_20_o_LessThan_87_o> created at line 51
+    Found 11-bit comparator greater for signal <BUS_0022_GND_20_o_LessThan_139_o> created at line 48
+    Found 11-bit comparator greater for signal <GND_20_o_BUS_0022_LessThan_141_o> created at line 49
+    Found 6-bit comparator greater for signal <GND_20_o_BUS_0026_LessThan_167_o> created at line 50
+    Found 10-bit comparator greater for signal <GND_20_o_BUS_0031_LessThan_189_o> created at line 48
+    Found 6-bit comparator greater for signal <GND_20_o_BUS_0030_LessThan_191_o> created at line 50
+    Summary:
+	inferred   4 Multiplier(s).
+	inferred  22 Adder/Subtractor(s).
+	inferred  28 D-type flip-flop(s).
+	inferred  12 Comparator(s).
+	inferred  21 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <colision_mux> synthesized.
+
+Synthesizing Unit <mario_ctrl>.
+    Related source file is "C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal\mario\mario_ctrl.vhd".
+    Found 9-bit register for signal <my>.
+    Found 6-bit register for signal <mvy>.
+    Found 2-bit register for signal <m_est>.
+    Found 10-bit register for signal <mx>.
+    Found 1-bit register for signal <m_dir>.
+    Found 11-bit subtractor for signal <GND_23_o_GND_23_o_sub_16_OUT> created at line 101.
+    Found 7-bit adder for signal <n0172> created at line 75.
+    Found 11-bit adder for signal <n0175> created at line 89.
+    Found 11-bit adder for signal <n0177[10:0]> created at line 97.
+    Found 11-bit adder for signal <n0179[10:0]> created at line 138.
+    Found 10-bit adder for signal <n0181[9:0]> created at line 139.
+    Found 6-bit comparator greater for signal <GND_23_o_mvy[5]_LessThan_1_o> created at line 74
+    Found 7-bit comparator greater for signal <GND_23_o_mvy[5]_LessThan_4_o> created at line 77
+    Found 7-bit comparator greater for signal <GND_23_o_GND_23_o_LessThan_11_o> created at line 91
+    Found 7-bit comparator greater for signal <GND_23_o_GND_23_o_LessThan_25_o> created at line 111
+    Found 7-bit comparator greater for signal <PWR_18_o_GND_23_o_LessThan_27_o> created at line 112
+    Found 12-bit comparator greater for signal <GND_23_o_GND_23_o_LessThan_29_o> created at line 114
+    Found 12-bit comparator greater for signal <GND_23_o_GND_23_o_LessThan_31_o> created at line 115
+    Found 11-bit comparator greater for signal <GND_23_o_BUS_0002_LessThan_33_o> created at line 116
+    Found 11-bit comparator greater for signal <BUS_0002_GND_23_o_LessThan_35_o> created at line 118
+    Found 32-bit comparator lessequal for signal <n0062> created at line 138
+    Found 32-bit comparator greater for signal <GND_23_o_px_int[31]_LessThan_52_o> created at line 138
+    Found 32-bit comparator lessequal for signal <n0066> created at line 139
+    Found 32-bit comparator greater for signal <GND_23_o_py_int[31]_LessThan_55_o> created at line 139
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred  28 D-type flip-flop(s).
+	inferred  13 Comparator(s).
+	inferred  21 Multiplexer(s).
+Unit <mario_ctrl> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 11
+ 16384x8-bit single-port Read Only RAM                 : 2
+ 16x10-bit single-port Read Only RAM                   : 6
+ 32768x8-bit single-port Read Only RAM                 : 1
+ 8192x7-bit single-port Read Only RAM                  : 2
+# Multipliers                                          : 6
+ 8x5-bit multiplier                                    : 1
+ 8x6-bit multiplier                                    : 3
+ 9x3-bit multiplier                                    : 1
+ 9x6-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 87
+ 10-bit adder                                          : 6
+ 10-bit subtractor                                     : 1
+ 11-bit adder                                          : 8
+ 11-bit subtractor                                     : 12
+ 13-bit adder                                          : 11
+ 13-bit addsub                                         : 1
+ 14-bit adder                                          : 8
+ 15-bit adder                                          : 6
+ 2-bit adder                                           : 1
+ 20-bit adder                                          : 1
+ 21-bit adder                                          : 1
+ 27-bit adder                                          : 1
+ 4-bit adder                                           : 6
+ 4-bit subtractor                                      : 12
+ 6-bit adder                                           : 1
+ 7-bit adder                                           : 1
+ 9-bit adder                                           : 10
+# Registers                                            : 52
+ 1-bit register                                        : 21
+ 10-bit register                                       : 3
+ 13-bit register                                       : 3
+ 14-bit register                                       : 1
+ 2-bit register                                        : 2
+ 20-bit register                                       : 1
+ 21-bit register                                       : 1
+ 27-bit register                                       : 1
+ 4-bit register                                        : 8
+ 6-bit register                                        : 1
+ 7-bit register                                        : 3
+ 8-bit register                                        : 6
+ 9-bit register                                        : 1
+# Comparators                                          : 126
+ 10-bit comparator greater                             : 25
+ 10-bit comparator lessequal                           : 15
+ 11-bit comparator greater                             : 10
+ 12-bit comparator greater                             : 2
+ 13-bit comparator greater                             : 10
+ 13-bit comparator lessequal                           : 8
+ 14-bit comparator greater                             : 8
+ 15-bit comparator greater                             : 8
+ 32-bit comparator greater                             : 2
+ 32-bit comparator lessequal                           : 2
+ 4-bit comparator greater                              : 6
+ 6-bit comparator greater                              : 6
+ 7-bit comparator greater                              : 4
+ 9-bit comparator greater                              : 20
+# Multiplexers                                         : 120
+ 1-bit 15-to-1 multiplexer                             : 6
+ 1-bit 2-to-1 multiplexer                              : 52
+ 10-bit 2-to-1 multiplexer                             : 6
+ 11-bit 2-to-1 multiplexer                             : 5
+ 12-bit 2-to-1 multiplexer                             : 5
+ 13-bit 2-to-1 multiplexer                             : 7
+ 2-bit 2-to-1 multiplexer                              : 4
+ 27-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 13
+ 6-bit 2-to-1 multiplexer                              : 7
+ 7-bit 2-to-1 multiplexer                              : 6
+ 8-bit 2-to-1 multiplexer                              : 7
+ 9-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+# Xors                                                 : 3
+ 1-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <der_solido> in Unit <u_col_mux> is equivalent to the following FF/Latch, which will be removed : <muro_der> 
+INFO:Xst:2261 - The FF/Latch <muro_izq> in Unit <u_col_mux> is equivalent to the following FF/Latch, which will be removed : <izq_solido> 
+WARNING:Xst:2677 - Node <direccion_sprite_6> of sequential type is unconnected in block <U_pintarMario>.
+
+Synthesizing (advanced) Unit <mapa_rom>.
+INFO:Xst:3226 - The RAM <Mram_addr[14]_PWR_6_o_wide_mux_0_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <data_out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32768-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_out>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <mapa_rom> synthesized (advanced).
+
+Synthesizing (advanced) Unit <motor>.
+The following registers are absorbed into counter <mod2_reg>: 1 register on signal <mod2_reg>.
+The following registers are absorbed into counter <v_count_reg>: 1 register on signal <v_count_reg>.
+The following registers are absorbed into counter <h_count_reg>: 1 register on signal <h_count_reg>.
+Unit <motor> synthesized (advanced).
+
+Synthesizing (advanced) Unit <pintar_Mario>.
+INFO:Xst:3226 - The RAM <u_sprites/Mram_addr[13]_PWR_9_o_wide_mux_0_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <u_sprites/rgb_pixel>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16384-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <direccion_rom> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <s_rgb_out>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <pintar_Mario> synthesized (advanced).
+
+Synthesizing (advanced) Unit <rom_nivel1>.
+INFO:Xst:3230 - The RAM description <Mram_addr[12]_X_5_o_wide_mux_0_OUT> will not be implemented on the device block RAM because of limited available resources. If you would like this RAM to be implemented in block RAM, please select a larger device or increase the value specified by the BRAM_Utilization_Ratio constraint.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8192-word x 7-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <rom_nivel1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <top_mario_vga>.
+The following registers are absorbed into counter <segundo_cont>: 1 register on signal <segundo_cont>.
+The following registers are absorbed into counter <contador60>: 1 register on signal <contador60>.
+The following registers are absorbed into counter <contador>: 1 register on signal <contador>.
+The following registers are absorbed into counter <tiempo_cent>: 1 register on signal <tiempo_cent>.
+The following registers are absorbed into counter <tiempo_dec>: 1 register on signal <tiempo_dec>.
+The following registers are absorbed into counter <tiempo_uni>: 1 register on signal <tiempo_uni>.
+The following registers are absorbed into counter <punt_mil>: 1 register on signal <punt_mil>.
+The following registers are absorbed into counter <punt_cent>: 1 register on signal <punt_cent>.
+The following registers are absorbed into counter <punt_dec>: 1 register on signal <punt_dec>.
+The following registers are absorbed into accumulator <scroll_x>: 1 register on signal <scroll_x>.
+	Multiplier <Mmult_n0792> in block <top_mario_vga> and adder/subtractor <Madd_tile_row[4]_GND_4_o_add_8_OUT> in block <top_mario_vga> are combined into a MAC<Maddsub_n0792>.
+	The following registers are also absorbed by the MAC: <tile_idx> in block <top_mario_vga>.
+INFO:Xst:3230 - The RAM description <U_Nivel_1/Mram_addr_mario[12]_X_5_o_wide_mux_2_OUT> will not be implemented on the device block RAM because of limited available resources. If you would like this RAM to be implemented in block RAM, please select a larger device or increase the value specified by the BRAM_Utilization_Ratio constraint.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8192-word x 7-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <s_rom_map_mario_entrada> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_pintarMoneda/Mram_addr[13]_PWR_9_o_wide_mux_0_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_pintarMoneda/rgb_pixel>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <("1",coin_y_pix,coin_x_pix)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <rgb_coin>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1147> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 10-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <tiempo_cent>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1181> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 10-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <tiempo_dec>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1130> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 10-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <tiempo_uni>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1096> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 10-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <punt_mil>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1113> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 10-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <punt_cent>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1164> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 10-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <punt_dec>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <top_mario_vga> synthesized (advanced).
+WARNING:Xst:2677 - Node <direccion_sprite_6> of sequential type is unconnected in block <pintar_Mario>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 11
+ 16384x8-bit single-port block Read Only RAM           : 1
+ 16x10-bit single-port distributed Read Only RAM       : 6
+ 32768x8-bit single-port block Read Only RAM           : 1
+ 512x8-bit single-port block Read Only RAM             : 1
+ 8192x7-bit single-port distributed Read Only RAM      : 2
+# MACs                                                 : 1
+ 8x5-to-13-bit MAC                                     : 1
+# Multipliers                                          : 5
+ 8x6-bit multiplier                                    : 3
+ 9x3-bit multiplier                                    : 1
+ 9x6-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 73
+ 10-bit adder                                          : 4
+ 10-bit subtractor                                     : 1
+ 11-bit adder                                          : 8
+ 11-bit subtractor                                     : 12
+ 13-bit adder                                          : 9
+ 14-bit adder                                          : 4
+ 15-bit adder                                          : 2
+ 4-bit adder                                           : 9
+ 4-bit subtractor                                      : 12
+ 6-bit adder                                           : 1
+ 7-bit adder                                           : 1
+ 9-bit adder                                           : 10
+# Counters                                             : 12
+ 10-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+ 20-bit up counter                                     : 1
+ 21-bit up counter                                     : 1
+ 27-bit up counter                                     : 1
+ 4-bit up counter                                      : 6
+# Accumulators                                         : 1
+ 13-bit updown accumulator                             : 1
+# Registers                                            : 127
+ Flip-Flops                                            : 127
+# Comparators                                          : 126
+ 10-bit comparator greater                             : 25
+ 10-bit comparator lessequal                           : 15
+ 11-bit comparator greater                             : 10
+ 12-bit comparator greater                             : 2
+ 13-bit comparator greater                             : 10
+ 13-bit comparator lessequal                           : 8
+ 14-bit comparator greater                             : 8
+ 15-bit comparator greater                             : 8
+ 32-bit comparator greater                             : 2
+ 32-bit comparator lessequal                           : 2
+ 4-bit comparator greater                              : 6
+ 6-bit comparator greater                              : 6
+ 7-bit comparator greater                              : 4
+ 9-bit comparator greater                              : 20
+# Multiplexers                                         : 113
+ 1-bit 15-to-1 multiplexer                             : 6
+ 1-bit 2-to-1 multiplexer                              : 52
+ 10-bit 2-to-1 multiplexer                             : 4
+ 11-bit 2-to-1 multiplexer                             : 5
+ 12-bit 2-to-1 multiplexer                             : 5
+ 13-bit 2-to-1 multiplexer                             : 7
+ 2-bit 2-to-1 multiplexer                              : 4
+ 4-bit 2-to-1 multiplexer                              : 9
+ 6-bit 2-to-1 multiplexer                              : 7
+ 7-bit 2-to-1 multiplexer                              : 6
+ 8-bit 2-to-1 multiplexer                              : 7
+ 9-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+# Xors                                                 : 3
+ 1-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <u_marioControl/u_col_mux/muro_izq> in Unit <top_mario_vga> is equivalent to the following FF/Latch, which will be removed : <u_marioControl/u_col_mux/izq_solido> 
+INFO:Xst:2261 - The FF/Latch <u_marioControl/u_col_mux/der_solido> in Unit <top_mario_vga> is equivalent to the following FF/Latch, which will be removed : <u_marioControl/u_col_mux/muro_der> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <estado[1:5]> with user encoding.
+---------------------
+ State   | Encoding
+---------------------
+ idle    | 00000
+ req_a1  | 00001
+ wait_a1 | 00010
+ rd_a1   | 00011
+ req_a2  | 00100
+ wait_a2 | 00101
+ rd_a2   | 00110
+ req_b1  | 00111
+ wait_b1 | 01000
+ rd_b1   | 01001
+ req_b2  | 01010
+ wait_b2 | 01011
+ rd_b2   | 01100
+ req_c1  | 01101
+ wait_c1 | 01110
+ rd_c1   | 01111
+ req_c2  | 10000
+ wait_c2 | 10001
+ rd_c2   | 10010
+ req_d1  | 10011
+ wait_d1 | 10100
+ rd_d1   | 10101
+ req_d2  | 10110
+ wait_d2 | 10111
+ rd_d2   | 11000
+ done    | 11001
+---------------------
+INFO:Xst:2261 - The FF/Latch <direccion_sprite_4> in Unit <pintar_Mario> is equivalent to the following FF/Latch, which will be removed : <direccion_sprite_5> 
+INFO:Xst:2261 - The FF/Latch <direccion_rom_12> in Unit <pintar_Mario> is equivalent to the following FF/Latch, which will be removed : <direccion_rom_13> 
+
+Optimizing unit <top_mario_vga> ...
+
+Optimizing unit <motor> ...
+
+Optimizing unit <pintar_Mario> ...
+WARNING:Xst:1426 - The value init of the FF/Latch direccion_sprite_4 hinder the constant cleaning in the block pintar_Mario.
+   You should achieve better results by setting this init to 1.
+
+Optimizing unit <mux_rifado> ...
+
+Optimizing unit <mario_ctrl> ...
+INFO:Xst:2261 - The FF/Latch <mvy_4> in Unit <mario_ctrl> is equivalent to the following FF/Latch, which will be removed : <mvy_5> 
+WARNING:Xst:1293 - FF/Latch <scroll_x_0> has a constant value of 0 in block <top_mario_vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <scroll_x_1> has a constant value of 0 in block <top_mario_vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <scroll_x_12> has a constant value of 0 in block <top_mario_vga>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <U_MOTOR/h_count_reg_0> in Unit <top_mario_vga> is equivalent to the following FF/Latch, which will be removed : <segundo_cont_2> 
+INFO:Xst:2261 - The FF/Latch <U_MOTOR/h_count_reg_1> in Unit <top_mario_vga> is equivalent to the following FF/Latch, which will be removed : <segundo_cont_3> 
+INFO:Xst:2261 - The FF/Latch <U_MOTOR/h_count_reg_2> in Unit <top_mario_vga> is equivalent to the following FF/Latch, which will be removed : <segundo_cont_4> 
+INFO:Xst:2261 - The FF/Latch <U_MOTOR/h_count_reg_3> in Unit <top_mario_vga> is equivalent to the following FF/Latch, which will be removed : <segundo_cont_5> 
+INFO:Xst:2261 - The FF/Latch <py_delay_0> in Unit <top_mario_vga> is equivalent to the following FF/Latch, which will be removed : <U_pintarMario/direccion_rom_4> 
+INFO:Xst:2261 - The FF/Latch <py_delay_1> in Unit <top_mario_vga> is equivalent to the following FF/Latch, which will be removed : <U_pintarMario/direccion_rom_5> 
+INFO:Xst:2261 - The FF/Latch <py_delay_2> in Unit <top_mario_vga> is equivalent to the following FF/Latch, which will be removed : <U_pintarMario/direccion_rom_6> 
+INFO:Xst:2261 - The FF/Latch <py_delay_3> in Unit <top_mario_vga> is equivalent to the following FF/Latch, which will be removed : <U_pintarMario/direccion_rom_7> 
+INFO:Xst:2261 - The FF/Latch <px_delay_0> in Unit <top_mario_vga> is equivalent to the following FF/Latch, which will be removed : <U_pintarMario/direccion_rom_0> 
+INFO:Xst:2261 - The FF/Latch <px_delay_1> in Unit <top_mario_vga> is equivalent to the following FF/Latch, which will be removed : <U_pintarMario/direccion_rom_1> 
+INFO:Xst:2261 - The FF/Latch <px_delay_2> in Unit <top_mario_vga> is equivalent to the following FF/Latch, which will be removed : <U_pintarMario/direccion_rom_2> 
+INFO:Xst:2261 - The FF/Latch <px_delay_3> in Unit <top_mario_vga> is equivalent to the following FF/Latch, which will be removed : <U_pintarMario/direccion_rom_3> 
+INFO:Xst:2261 - The FF/Latch <segundo_cont_0> in Unit <top_mario_vga> is equivalent to the following FF/Latch, which will be removed : <U_MOTOR/mod2_reg_0> 
+INFO:Xst:2261 - The FF/Latch <segundo_cont_1> in Unit <top_mario_vga> is equivalent to the following FF/Latch, which will be removed : <U_MOTOR/mod2_reg_1> 
+INFO:Xst:2261 - The FF/Latch <u_marioControl/u_mario_core/mvy_5> in Unit <top_mario_vga> is equivalent to the following FF/Latch, which will be removed : <u_marioControl/u_mario_core/mvy_4> 
+INFO:Xst:2261 - The FF/Latch <segundo_cont_6> in Unit <top_mario_vga> is equivalent to the following FF/Latch, which will be removed : <U_MOTOR/h_count_reg_4> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_mario_vga, actual ratio is 30.
+FlipFlop U_MOTOR/h_count_reg_2 has been replicated 1 time(s)
+FlipFlop scroll_x_10 has been replicated 1 time(s)
+FlipFlop scroll_x_9 has been replicated 1 time(s)
+FlipFlop u_marioControl/u_mario_core/mx_0 has been replicated 1 time(s)
+FlipFlop u_marioControl/u_mario_core/mx_1 has been replicated 1 time(s)
+FlipFlop u_marioControl/u_mario_core/mx_2 has been replicated 1 time(s)
+FlipFlop u_marioControl/u_mario_core/mx_3 has been replicated 1 time(s)
+FlipFlop u_marioControl/u_mario_core/mx_4 has been replicated 1 time(s)
+FlipFlop u_marioControl/u_mario_core/mx_5 has been replicated 1 time(s)
+FlipFlop u_marioControl/u_mario_core/mx_6 has been replicated 1 time(s)
+FlipFlop u_marioControl/u_mario_core/mx_7 has been replicated 1 time(s)
+FlipFlop u_marioControl/u_mario_core/mx_8 has been replicated 1 time(s)
+FlipFlop u_marioControl/u_mario_core/my_4 has been replicated 2 time(s)
+FlipFlop u_marioControl/u_mario_core/my_6 has been replicated 1 time(s)
+FlipFlop u_marioControl/u_mario_core/my_7 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <top_mario_vga> :
+	Found 2-bit shift register for signal <U_pintarMario/direccion_rom_12>.
+Unit <top_mario_vga> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 251
+ Flip-Flops                                            : 251
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top_mario_vga.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3514
+#      GND                         : 1
+#      INV                         : 12
+#      LUT1                        : 132
+#      LUT2                        : 140
+#      LUT3                        : 175
+#      LUT4                        : 202
+#      LUT5                        : 443
+#      LUT6                        : 1737
+#      MUXCY                       : 298
+#      MUXF7                       : 84
+#      VCC                         : 1
+#      XORCY                       : 289
+# FlipFlops/Latches                : 252
+#      FD                          : 54
+#      FDC                         : 25
+#      FDCE                        : 81
+#      FDE                         : 40
+#      FDPE                        : 11
+#      FDR                         : 41
+# RAMS                             : 25
+#      RAMB16BWER                  : 24
+#      RAMB8BWER                   : 1
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 4
+#      OBUF                        : 10
+# DSPs                             : 1
+#      DSP48A1                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             252  out of  18224     1%  
+ Number of Slice LUTs:                 2842  out of   9112    31%  
+    Number used as Logic:              2841  out of   9112    31%  
+    Number used as Memory:                1  out of   2176     0%  
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2893
+   Number with an unused Flip Flop:    2641  out of   2893    91%  
+   Number with an unused LUT:            51  out of   2893     1%  
+   Number of fully used LUT-FF pairs:   201  out of   2893     6%  
+   Number of unique control sets:        26
+
+IO Utilization: 
+ Number of IOs:                          16
+ Number of bonded IOBs:                  15  out of    232     6%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               25  out of     32    78%  
+    Number using Block RAM only:         25
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 279   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 10.206ns (Maximum Frequency: 97.985MHz)
+   Minimum input arrival time before clock: 8.325ns
+   Maximum output required time after clock: 20.888ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 10.206ns (frequency: 97.985MHz)
+  Total number of paths / destination ports: 540235 / 781
+-------------------------------------------------------------------------
+Delay:               10.206ns (Levels of Logic = 10)
+  Source:            u_marioControl/u_mario_core/my_2 (FF)
+  Destination:       punt_cent_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: u_marioControl/u_mario_core/my_2 to punt_cent_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            18   0.447   1.297  u_marioControl/u_mario_core/my_2 (u_marioControl/u_mario_core/my_2)
+     LUT4:I0->O            7   0.203   0.774  GND_4_o_BUS_0010_LessThan_42_o111 (GND_4_o_BUS_0010_LessThan_42_o11)
+     LUT5:I4->O            1   0.205   0.580  coin_collected[0]_coin_collected[1]_OR_58_o4_SW1 (N105)
+     LUT6:I5->O            2   0.205   0.617  coin_collected[0]_coin_collected[1]_OR_58_o4 (coin_collected[0]_coin_collected[1]_OR_58_o4)
+     LUT6:I5->O            1   0.205   0.580  coin_collected[0]_coin_collected[1]_OR_58_o2 (coin_collected[0]_coin_collected[1]_OR_58_o2)
+     LUT6:I5->O            5   0.205   0.715  coin_collected[0]_coin_collected[1]_OR_58_o3 (coin_collected[0]_coin_collected[1]_OR_58_o)
+     LUT6:I5->O            3   0.205   0.651  coin_collected[0]_coin_collected[4]_OR_61_o (coin_collected[0]_coin_collected[4]_OR_61_o)
+     LUT6:I5->O            4   0.205   0.684  coin_collected[0]_coin_collected[5]_OR_62_o (coin_collected[0]_coin_collected[5]_OR_62_o)
+     LUT6:I5->O           12   0.205   0.909  coin_collected[0]_coin_collected[6]_OR_63_o4 (coin_collected[0]_coin_collected[6]_OR_63_o)
+     LUT3:I2->O            8   0.205   0.803  GND_4_o_coin_collected[0]_MUX_57502_o3_rstpot (GND_4_o_coin_collected[0]_MUX_57502_o3_rstpot)
+     LUT5:I4->O            1   0.205   0.000  punt_cent_1_dpot1 (punt_cent_1_dpot1)
+     FDCE:D                    0.102          punt_cent_1
+    ----------------------------------------
+    Total                     10.206ns (2.597ns logic, 7.609ns route)
+                                       (25.4% logic, 74.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2050 / 182
+-------------------------------------------------------------------------
+Offset:              8.325ns (Levels of Logic = 7)
+  Source:            btn_left (PAD)
+  Destination:       u_marioControl/u_mario_core/mx_4 (FF)
+  Destination Clock: clk rising
+
+  Data Path: btn_left to u_marioControl/u_mario_core/mx_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   1.222   1.180  btn_left_IBUF (btn_left_IBUF)
+     LUT5:I1->O            6   0.203   1.089  u_marioControl/u_mario_core/btn_izq11 (u_marioControl/u_mario_core/btn_izq1)
+     LUT5:I0->O           14   0.203   1.302  u_marioControl/u_mario_core/btn_izq2 (u_marioControl/u_mario_core/btn_izq_mmx_out)
+     LUT6:I1->O            4   0.203   0.684  u_marioControl/u_mario_core/Mmux_GND_23_o_GND_23_o_mux_36_OUT311 (u_marioControl/u_mario_core/Mmux_GND_23_o_GND_23_o_mux_36_OUT31)
+     LUT5:I4->O            1   0.205   0.580  u_marioControl/u_mario_core/Mmux_GND_23_o_GND_23_o_mux_36_OUT51 (u_marioControl/u_mario_core/Mmux_GND_23_o_GND_23_o_mux_36_OUT5)
+     LUT6:I5->O            1   0.205   0.944  u_marioControl/u_mario_core/Mmux_GND_23_o_GND_23_o_mux_36_OUT52 (u_marioControl/u_mario_core/Mmux_GND_23_o_GND_23_o_mux_36_OUT51)
+     LUT6:I0->O            2   0.203   0.000  u_marioControl/u_mario_core/Mmux_GND_23_o_GND_23_o_mux_36_OUT53 (u_marioControl/u_mario_core/GND_23_o_GND_23_o_mux_36_OUT<4>)
+     FDCE:D                    0.102          u_marioControl/u_mario_core/mx_4
+    ----------------------------------------
+    Total                      8.325ns (2.546ns logic, 5.779ns route)
+                                       (30.6% logic, 69.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 104850 / 10
+-------------------------------------------------------------------------
+Offset:              20.888ns (Levels of Logic = 16)
+  Source:            U_MOTOR/v_count_reg_6 (FF)
+  Destination:       rgb<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: U_MOTOR/v_count_reg_6 to rgb<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            28   0.447   1.599  U_MOTOR/v_count_reg_6 (U_MOTOR/v_count_reg_6)
+     LUT6:I0->O            4   0.203   0.931  Madd_GND_4_o_GND_4_o_add_206_OUT_xor<6>121 (Madd_GND_4_o_GND_4_o_add_206_OUT_xor<6>12)
+     LUT4:I0->O           26   0.203   1.311  GND_4_o_GND_4_o_AND_151_o1 (GND_4_o_GND_4_o_AND_151_o)
+     LUT5:I3->O            6   0.203   1.109  Mmult_GND_4_o_GND_4_o_MuLt_327_OUT_Madd1_xor<2>11 (GND_4_o_GND_4_o_MuLt_327_OUT<2>)
+     LUT6:I0->O            2   0.203   0.981  Madd_n0870_Madd_lut<2>1 (Madd_n0870_Madd_lut<2>)
+     LUT6:I0->O            2   0.203   0.864  Msub_GND_4_o_BUS_0079_sub_316_OUT<3:0>_xor<3>11 (GND_4_o_BUS_0079_sub_316_OUT<3>)
+     LUT5:I1->O            1   0.203   0.684  Mmux_rgb1249 (Mmux_rgb1249)
+     LUT6:I4->O            1   0.203   0.924  Mmux_rgb1250 (Mmux_rgb1250)
+     LUT6:I1->O            1   0.203   0.924  Mmux_rgb1251_SW0 (N188)
+     LUT6:I1->O            1   0.203   0.580  Mmux_rgb1251 (Mmux_rgb1251)
+     LUT4:I3->O            1   0.205   0.944  Mmux_rgb1252_SW0 (N144)
+     LUT6:I0->O            1   0.203   0.684  Mmux_rgb1252 (Mmux_rgb1252)
+     LUT5:I3->O            2   0.203   0.981  Mmux_rgb1256_SW0 (N190)
+     LUT6:I0->O            1   0.203   0.580  Mmux_rgb1256_SW1 (N210)
+     LUT6:I5->O            8   0.205   1.147  Mmux_rgb1256 (Mmux_rgb12)
+     LUT5:I0->O            1   0.203   0.579  Mmux_rgb11 (rgb_0_OBUF)
+     OBUF:I->O                 2.571          rgb_0_OBUF (rgb<0>)
+    ----------------------------------------
+    Total                     20.888ns (6.067ns logic, 14.821ns route)
+                                       (29.0% logic, 71.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   10.206|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 80.00 secs
+Total CPU time to Xst completion: 79.42 secs
+ 
+--> 
+
+Total memory usage is 4830544 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
+Number of infos    :   36 (   0 filtered)
+

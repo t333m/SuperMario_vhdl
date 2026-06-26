@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal\top_mario_vga.ncd
+OUTFILE=C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal\top_mario_vga.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\vboxuser\Desktop\ffdsd\ffdsd\Finalfinal
+LICENSE=WebPack
+USER_INFO=__0_0_0
